@@ -1,59 +1,88 @@
+
 body {
   font-family: 'Segoe UI', sans-serif;
   background: #fff0f6;
+  margin: 0;
+  padding: 0;
   color: #000;
-  margin: 20px;
 }
-h1 {
-  color: #a64ca6;
+header {
+  background-color: #f8d2ec;
+  padding: 20px;
   text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+header h1 {
+  margin: 0;
+  color: #a64ca6;
   font-size: 2em;
+}
+header p {
+  margin: 5px 0 0;
+  color: #6a2c70;
+}
+.main {
+  padding: 20px;
+}
+#progress-bar {
   margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
 }
 .container {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
-  gap: 20px;
+  gap: 24px;
   padding: 16px;
 }
-table {
-  border-collapse: collapse;
+.ciclo {
   min-width: 220px;
   max-width: 240px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
   flex-shrink: 0;
 }
-th {
-  background: #dba6d8;
-  color: white;
-  padding: 10px;
-  font-size: 1.1em;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-}
-td {
-  border: 1px solid #f1d6eb;
-  padding: 8px;
+.ciclo h2 {
   text-align: center;
+  color: #a64ca6;
+  font-size: 1.1em;
+}
+.card {
+  width: 100px;
+  height: 100px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.75em;
+  padding: 10px;
   cursor: pointer;
   transition: background 0.3s, color 0.3s;
-  font-size: 0.95em;
 }
-td.bloqueado {
-  background: #eee;
-  color: #aaa;
+.card.disponible {
+  background: #fce3fa;
 }
-td.disponible {
-  background: #f3d1f4;
+.card.bloqueado {
+  background: #f0f0f0;
+  color: #bbb;
 }
-td.completado {
+.card.completado {
   background: #fff;
+  color: #777;
   text-decoration: line-through;
-  color: #444;
+  position: relative;
 }
-td:hover {
-  background: #ffe6f0;
+.card.completado::after {
+  content: "✓";
+  color: #a64ca6;
+  font-weight: bold;
+  position: absolute;
+  top: 5px;
+  right: 8px;
+}
+.card:hover {
+  background: #ffeef9;
 }
