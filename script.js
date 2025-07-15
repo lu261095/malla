@@ -1,4 +1,3 @@
-// script.js completo con toda la malla EPE de Negocios Internacionales (UPC)
 
 const datos = {
   "1": [
