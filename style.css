@@ -47,20 +47,21 @@ header p {
   font-size: 1.1em;
 }
 .card {
-  width: 100px;
-  height: 100px;
+  width: 110px;
+  height: 110px;
   background: white;
-  border-radius: 12px;
+  border-radius: 16px;
   box-shadow: 0 0 6px rgba(0,0,0,0.1);
-  margin: 10px auto;
+  margin: 12px auto;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: 0.75em;
+  font-size: 0.78em;
   padding: 10px;
   cursor: pointer;
   transition: background 0.3s, color 0.3s;
+  position: relative;
 }
 .card.disponible {
   background: #fce3fa;
@@ -73,7 +74,6 @@ header p {
   background: #fff;
   color: #777;
   text-decoration: line-through;
-  position: relative;
 }
 .card.completado::after {
   content: "✓";
@@ -85,4 +85,25 @@ header p {
 }
 .card:hover {
   background: #ffeef9;
+}
+
+/* Tooltip para mostrar requisitos */
+.card .tooltip {
+  visibility: hidden;
+  width: 180px;
+  background-color: #fff;
+  color: #333;
+  text-align: left;
+  padding: 8px;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 1;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-size: 0.75em;
+}
+.card:hover .tooltip {
+  visibility: visible;
 }
