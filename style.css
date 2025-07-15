@@ -1,48 +1,59 @@
-
 body {
-  font-family: Arial, sans-serif;
-  background: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff0f6;
   color: #000;
   margin: 20px;
 }
 h1 {
-  color: #7e57c2;
+  color: #a64ca6;
   text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
 }
 .container {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
-  gap: 16px;
+  gap: 20px;
   padding: 16px;
 }
 table {
   border-collapse: collapse;
-  min-width: 200px;
-  max-width: 250px;
+  min-width: 220px;
+  max-width: 240px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
   flex-shrink: 0;
 }
 th {
-  background: #7e57c2;
+  background: #dba6d8;
   color: white;
-  padding: 8px;
-  text-align: center;
+  padding: 10px;
+  font-size: 1.1em;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
 td {
-  border: 1px solid #ccc;
-  padding: 6px;
+  border: 1px solid #f1d6eb;
+  padding: 8px;
   text-align: center;
   cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  font-size: 0.95em;
 }
 td.bloqueado {
-  background: #666;
-  color: #eee;
+  background: #eee;
+  color: #aaa;
 }
 td.disponible {
-  background: #d1c4e9;
+  background: #f3d1f4;
 }
 td.completado {
-  background: white;
+  background: #fff;
   text-decoration: line-through;
-  color: #000;
+  color: #444;
+}
+td:hover {
+  background: #ffe6f0;
 }
