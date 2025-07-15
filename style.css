@@ -1,0 +1,38 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #000;
+  margin: 20px;
+}
+h1 {
+  color: #7e57c2;
+  text-align: center;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+th {
+  background: #7e57c2;
+  color: white;
+  padding: 8px;
+}
+td {
+  border: 1px solid #ccc;
+  padding: 6px;
+  text-align: center;
+  cursor: pointer;
+}
+td.bloqueado {
+  background: #666;
+  color: #eee;
+}
+td.disponible {
+  background: #d1c4e9;
+}
+td.completado {
+  background: white;
+  text-decoration: line-through;
+  color: #000;
+}
